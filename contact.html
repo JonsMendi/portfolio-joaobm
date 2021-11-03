@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>João Mendonça - Portfolio</title>
+      <link rel="shortcut icon" href="img/joao-favicon-32x32.png">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+      <!--Inside of the <body> the structure should be always in the follow orientation: <header> <main> and <footer>. The <nav> should be used for the Navigation menu-->
+      <header class="page-header">
+        <img src="img/joao-cookingcode-logo.png" alt="Personal logo of Joao Borges Mendonca, Text logo that consists my name" class="page-header__item">
+          <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+              <li role="presentation">
+                <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active button1">Home</a>
+              </li>
+              <li role="presentation">
+                <a href="about.html" role="menuitem" class="navigation-list__item button1">Myself</a>
+              </li>
+              <li role="presentation">
+                <a href="work.html" role="menuitem" class="navigation-list__item button1">Work</a>
+              </li>
+              <li role="presentation">
+                <a href="contact.html" role="menuitem" class="navigation-list__item button1">Contact</a>
+              </li>
+            </ul>
+          </nav>
+      </header>
+      <main class="project-contact">
+        <h1>Contact</h1>
+        <div class="project-contact__first">
+          <!--With Labels and Input, be sure to connect them with "for="(label) and "id="(input)-->
+          <form action="" method="post">
+            <label class="project-contact__first-item" for="contact-email">E-mail:</label>
+            <input type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <!--"required" makes that the field is necessary for the data be validate-->
+            <!--"Pattern" is a validation form the makes obligatorie the use, in this case of "@" to make sure that will be send an e-mail-->
+            <!-- In the telephone number I decided to not use Validation to allow international number-->
+            <label class="project-contact__first-item" for="contact-telephone">Telephone:</label>
+            <input type="tel" id="contact-telephone">
+
+            <label class="project-contact__first-item" for="contact-message">Message:</label>
+            <textarea maxlength="240" id="contact-message" required>Your message</textarea>
+            <input type="submit" value="Send message">
+          </form>
+        </div>
+          <div class="project-contact__second">
+            <a href="tel:+491744010727">Whatsapp</a>
+            <a href="skype:joaoborgesmendonca">Skype</a>
+            <a href="mailto:jborgesmendonca@gmail.com">jborgesmendonca@gmail.com</a>
+            <a href="mailto:jborgesmendonca@gmail.com">Contact me :)</a>
+          </div>
+      </main>
+      <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/jborgesmendonca/" target="_blank"> <img src="img/facebook.svg" width="30" height="30" alt="Facebook"></a>
+          <a href="https://www.instagram.com/joao.borges.mendonca/" target="_blank"> <img src="img/instagram.svg" width="30" height="30" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/joão-mendonça-0288a26b/" target="_blank"> <img src="img/linkedin.svg" width="30" height="30" alt="Linkedin"></a>
+        </div>
+      </footer>
+
+      <div>
+        <!--The link above is "tota11y" screen reader/structure corrector -->
+      <script src="js/tota11y.min.js"></script>
+      </div>
+    </body>
+  </html>

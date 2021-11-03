@@ -1,0 +1,366 @@
+/*
+Native CSS Variables
+*/
+
+:root {
+--main-bg-color: #E3DFD3;
+--main-txt-color: #4A4128;
+--secondary-color: #9F9882;
+--tertiary-color: #93896D;
+
+--ff: 'Montserrat', sans-serif;
+--ff-w-bold: 700;
+--ff-w-normal: 400;
+--ff-s-body: 16px;
+--ff-s-h1: 30px;
+--ff-s-h2: 24px;
+--ff-s-h3: 18px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--ff);
+  font-weight: var(--ff-w-normal);
+  font-size: var(--ff-s-body);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: var(--ff-s-h1);
+  font-weight: var(--ff-w-bold);
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--ff-s-h2);
+  font-weight: var(--ff-w-bold);
+}
+
+h3 {
+  font-size: var(--ff-s-h3);
+  font-weight: var(--ff-w-bold);
+}
+
+a {
+  color: var(--main-txt-color);
+}
+
+a:visited {
+  color: var(--main-txt-color);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--tertiary-color);
+}
+
+.button, .button1, button {
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s opacity;
+
+}
+
+button:hover,
+button:focus,
+.button1:hover,
+.button1:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button1 {
+  background-color: var(--main-bg-color);
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(147, 137, 109);
+}
+
+
+.button__secondary {
+  background-color: var(--main-txt-color);
+  color: var(--secondary-color)
+}
+
+.navigation-list__item--active {
+}
+
+/*The part under is made on FlexBox */
+.page-header {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+  width: 180px;
+  height: 80px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+/*to align the hyperlinks in right site(how is defined this "last child"?)the page-header__item should not be jus the image? talking about childs why in this case is not the "page-header"?*/
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 50px;
+  padding-top: 5px;
+}
+/*for the points elimination*/
+.navigation-list {
+  list-style-type: none;
+}
+/*just the list*/
+.navigation-list li {
+  display: inline-block;
+  margin-left: 30px;
+}
+/*The part above is made on FlexBox */
+
+
+/*Main Section*/
+.page-profile {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.page-profile__portrait {
+  float: left;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-right: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
+	transition: all ease-in-out .2s;
+}
+
+.page-profile__text {
+  padding-top: 50px;
+}
+
+.page-profile__button {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-list__section {
+  padding-top: 50px;
+}
+
+
+/*The part under is made on GRID*/
+/*this is the start of the fallback*/
+.project-list__item {
+  display: inline-block;
+  width: 33%;
+}
+/*this is the end of the fallback*/
+/*the part under is to make sure, when it's possible to run Grid, it does*/
+@supports (display: grid) {
+
+.project-list {
+  display: grid;
+  background-color: var(--secondary-color);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 30px;
+}
+
+.project-list__item {
+  background-color: var(--secondary-color);
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+/* This is an example how to manipulate childs(individuals)
+.project-list__item:last-child {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+*/
+/*The part above is made on Grid */
+}
+
+.project-contact {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+}
+
+.project-contact__first {
+  padding: 10px;
+	border-radius: 55px;
+	width: 240px;
+  margin: auto;
+}
+
+.project-contact__second {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 200px 30px 200px;
+
+}
+
+
+.project-about {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+}
+
+.project-about__first {
+}
+
+.project-about__second {
+  display: inline-block;
+  margin: auto;
+}
+
+.project-about__third {
+  margin-top: 50px;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-footer__socialmedia {
+
+}
+/*ANIMATIONS under*/
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change, rotation, grow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  transform-origin: center;
+  transform-box: fill-box;
+
+
+}
+
+.cloud-front {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-back {
+  animation-duration: 10s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*ANIMATION color change under*/
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+/*ANIMATION moving a cloud under*/
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(2);
+  }
+}
+/*Mobile Querie under*/
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+  .project-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
