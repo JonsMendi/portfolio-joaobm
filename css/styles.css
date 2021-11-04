@@ -59,7 +59,14 @@ a:hover, a:focus {
 }
 
 a:active {
-  color: var(--tertiary-color);
+  color: var(--main-txt-color);
+}
+
+span {
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 7%;
+  padding: 4px;
 }
 
 .button, .button1, button {
@@ -93,9 +100,10 @@ button:focus,
 
 .button1 {
   background-color: var(--main-bg-color);
-  padding: 6px;
-  border-radius: 8px;
-  border: 1px solid rgba(147, 137, 109);
+  padding: 8px;
+  border: 2px rgba(0, 0, 0);
+  border-style: dotted;
+  border-radius: 10px;
 }
 
 
@@ -119,8 +127,8 @@ button:focus,
   flex: 0 1 200px;
   width: 180px;
   height: 80px;
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 /*to align the hyperlinks in right site(how is defined this "last child"?)the page-header__item should not be jus the image? talking about childs why in this case is not the "page-header"?*/
@@ -147,7 +155,8 @@ button:focus,
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
 
 .page-profile__portrait {
@@ -156,13 +165,15 @@ button:focus,
   height: auto;
   max-width: 300px;
   margin-right: 40px;
+  border: 1px;
   border-radius: 50%;
+  border-style: dotted;
   box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
 	transition: all ease-in-out .2s;
 }
 
 .page-profile__text {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .page-profile__button {
@@ -187,7 +198,7 @@ button:focus,
 
 .project-list {
   display: grid;
-  background-color: var(--secondary-color);
+  background-color: rgba(159,152,130, .3);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
@@ -195,7 +206,10 @@ button:focus,
 }
 
 .project-list__item {
-  background-color: var(--secondary-color);
+  background-color: rgba(159,152,130, .3);
+  padding: 5px 20px 20px 20px;
+  border: 4px;
+  border-style: dotted;
   width: auto;
   min-height: auto;
   margin: 0;
@@ -238,6 +252,7 @@ button:focus,
   flex-direction: column;
   text-align: center;
   padding: 50px;
+
 }
 
 .project-about__first {
@@ -262,6 +277,13 @@ button:focus,
 .page-footer__socialmedia {
 
 }
+
+.horizontal-lines {
+  border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3));
+}
+
 /*ANIMATIONS under*/
 
 .sun {
