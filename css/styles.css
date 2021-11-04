@@ -116,14 +116,14 @@ button:focus,
 }
 
 /*The part under is made on FlexBox */
-.page-header {
+.main-header {
   display: flex;
   width: 100%;
   margin: 20px;
 
 }
 
-.page-header__item {
+.main-header__item {
   flex: 0 1 200px;
   width: 180px;
   height: 80px;
@@ -132,26 +132,26 @@ button:focus,
 }
 
 /*to align the hyperlinks in right site(how is defined this "last child"?)the page-header__item should not be jus the image? talking about childs why in this case is not the "page-header"?*/
-.page-header__item:last-child {
+.main-header__item:last-child {
   flex-grow: 1;
   text-align: right;
   padding-right: 50px;
   padding-top: 5px;
 }
 /*for the points elimination*/
-.navigation-list {
+.main-navigation__list {
   list-style-type: none;
 }
 /*just the list*/
-.navigation-list li {
+.main-navigation__list li {
   display: inline-block;
   margin-left: 30px;
 }
 /*The part above is made on FlexBox */
 
 
-/*Main Section*/
-.page-profile {
+/*PAGE INDEX STARTING*/
+.index-profile {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -159,7 +159,7 @@ button:focus,
   padding-bottom: 200px;
 }
 
-.page-profile__portrait {
+.index-profile__portrait {
   float: left;
   width: 100%;
   height: auto;
@@ -172,31 +172,27 @@ button:focus,
 	transition: all ease-in-out .2s;
 }
 
-.page-profile__text {
+.index-profile__text {
   padding-top: 100px;
 }
 
-.page-profile__button {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-list__section {
+/*PAGE WORK STARTING*/
+.work-list__section {
   padding-top: 50px;
 }
 
-
 /*The part under is made on GRID*/
 /*this is the start of the fallback*/
-.project-list__item {
+.work-list__item {
   display: inline-block;
   width: 33%;
 }
+
 /*this is the end of the fallback*/
 /*the part under is to make sure, when it's possible to run Grid, it does*/
 @supports (display: grid) {
 
-.project-list {
+.work-list {
   display: grid;
   background-color: rgba(159,152,130, .3);
   grid-template-columns: 1fr 1fr 1fr;
@@ -205,7 +201,7 @@ button:focus,
   padding: 30px;
 }
 
-.project-list__item {
+.work-list__item {
   background-color: rgba(159,152,130, .3);
   padding: 5px 20px 20px 20px;
   border: 4px;
@@ -223,7 +219,7 @@ button:focus,
 /*The part above is made on Grid */
 }
 
-.project-contact {
+.contact-list {
   clear: both;
   display: flex;
   flex-direction: column;
@@ -231,14 +227,14 @@ button:focus,
   padding: 50px;
 }
 
-.project-contact__first {
+.contact-list__first {
   padding: 10px;
 	border-radius: 55px;
 	width: 240px;
   margin: auto;
 }
 
-.project-contact__second {
+.contact-list__second {
   display: flex;
   justify-content: space-around;
   padding: 30px 200px 30px 200px;
@@ -246,7 +242,7 @@ button:focus,
 }
 
 
-.project-about {
+.about-list {
   clear: both;
   display: flex;
   flex-direction: column;
@@ -255,15 +251,16 @@ button:focus,
 
 }
 
-.project-about__first {
+.about-list__myself-item:last-child {
+  padding-left: 30px;
 }
 
-.project-about__second {
+.about-list__skills {
   display: inline-block;
   margin: auto;
 }
 
-.project-about__third {
+.about-list__button {
   margin-top: 50px;
 }
 

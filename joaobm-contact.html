@@ -12,44 +12,44 @@
     </head>
     <body>
       <!--Inside of the <body> the structure should be always in the follow orientation: <header> <main> and <footer>. The <nav> should be used for the Navigation menu-->
-      <header class="page-header">
-        <img src="img/joao-cookingcode-logo.png" alt="Personal logo of Joao Borges Mendonca, Text logo that consists my name" class="page-header__item">
-          <nav class="main-navigation page-header__item">
-            <ul role="menubar" class="navigation-list">
+      <header class="main-header">
+        <img src="img/joao-cookingcode-logo.png" alt="Personal logo of Joao Borges Mendonca, Text logo that consists my name" class="main-header__item">
+          <nav class="main-navigation main-header__item">
+            <ul role="menubar" class="main-navigation__list">
               <li role="presentation">
-                <a href="joaobm-index.html" role="menuitem" class="navigation-list__item navigation-list__item--active button1">Home</a>
+                <a href="joaobm-index.html" role="menuitem" class="main-navigation__list__item main-navigation__list__item--active button1">Home</a>
               </li>
               <li role="presentation">
-                <a href="joaobm-about.html" role="menuitem" class="navigation-list__item button1">Myself</a>
+                <a href="joaobm-about.html" role="menuitem" class="main-navigation__list__item button1">Myself</a>
               </li>
               <li role="presentation">
-                <a href="joaobm-work.html" role="menuitem" class="navigation-list__item button1">Work</a>
+                <a href="joaobm-work.html" role="menuitem" class="main-navigation__list__item button1">Work</a>
               </li>
               <li role="presentation">
-                <a href="joaobm-contact.html" role="menuitem" class="navigation-list__item button1">Contact</a>
+                <a href="joaobm-contact.html" role="menuitem" class="main-navigation__list__item button1">Contact</a>
               </li>
             </ul>
           </nav>
       </header>
-      <main class="project-contact">
+      <main class="contact-list">
         <h1>Contact</h1>
-        <div class="project-contact__first">
+        <div class="contact-list__first">
           <!--With Labels and Input, be sure to connect them with "for="(label) and "id="(input)-->
           <form action="" method="post">
-            <label class="project-contact__first-item" for="contact-email">E-mail:</label>
+            <label class="contact-list__first-item" for="contact-email">E-mail:</label>
             <input type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             <!--"required" makes that the field is necessary for the data be validate-->
             <!--"Pattern" is a validation form the makes obligatorie the use, in this case of "@" to make sure that will be send an e-mail-->
             <!-- In the telephone number I decided to not use Validation to allow international number-->
-            <label class="project-contact__first-item" for="contact-telephone">Telephone:</label>
+            <label class="contact-list__first-item" for="contact-telephone">Telephone:</label>
             <input type="tel" id="contact-telephone">
 
-            <label class="project-contact__first-item" for="contact-message">Message:</label>
+            <label class="contact-list__first-item" for="contact-message">Message:</label>
             <textarea maxlength="240" id="contact-message" required>Your message</textarea>
             <input type="submit" value="Send message">
           </form>
         </div>
-          <div class="project-contact__second">
+          <div class="contact-list__second">
             <a href="tel:+491744010727">Whatsapp</a>
             <a href="skype:joaoborgesmendonca">Skype</a>
             <a href="mailto:jborgesmendonca@gmail.com">jborgesmendonca@gmail.com</a>
