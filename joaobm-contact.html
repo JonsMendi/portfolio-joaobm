@@ -35,17 +35,17 @@
         <h1>Contact</h1>
         <div class="project-contact__first">
           <!--With Labels and Input, be sure to connect them with "for="(label) and "id="(input)-->
-          <form action="" method="post">
+          <form action="#" method="post">
             <label class="project-contact__first-item" for="contact-email">E-mail:</label>
-            <input type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <input class="project-contact__first-item-two" type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             <!--"required" makes that the field is necessary for the data be validate-->
             <!--"Pattern" is a validation form the makes obligatorie the use, in this case of "@" to make sure that will be send an e-mail-->
             <!-- In the telephone number I decided to not use Validation to allow international number-->
             <label class="project-contact__first-item" for="contact-telephone">Telephone:</label>
-            <input type="tel" id="contact-telephone">
+            <input class="project-contact__first-item-two" type="tel" id="contact-telephone">
 
             <label class="project-contact__first-item" for="contact-message">Message:</label>
-            <textarea maxlength="240" id="contact-message" required>Your message</textarea>
+            <textarea class="project-contact__first-item-two" maxlength="240" id="contact-message" required>Your message</textarea>
             <input type="submit" value="Send message">
           </form>
         </div>
