@@ -154,17 +154,16 @@ button:focus,
 
 /* Main Section */
 .page-profile {
+  display: flex;
+  flex-direction: row;
   max-width: 700px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 .page-profile__portrait {
-  float: left;
-  width: 100%;
-  height: auto;
   max-width: 300px;
   margin-right: 40px;
   border: 1px;
@@ -176,11 +175,6 @@ button:focus,
 
 .page-profile__text {
   padding-top: 100px;
-}
-
-.page-profile__button {
-  display: flex;
-  flex-direction: row;
 }
 
 .project-list__section {
