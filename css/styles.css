@@ -21,7 +21,7 @@ Native CSS Variables
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color, #e3dfd3); /* Fallback color IExplorer */
   font-family: var(--ff);
   font-weight: var(--ff-w-normal);
   font-size: var(--ff-s-body);
@@ -63,7 +63,8 @@ a:active {
 
 span {
   color: white;
-  background-color: var(--secondary-color);
+  background-color: black; /* Fallback color for IExplorer */
+  background-color: #9f9882;
   border-radius: 7%;
   padding: 4px;
 }
@@ -112,7 +113,7 @@ button:focus,
 }
 
 .button__secondary {
-  background-color: var(--main-txt-color);
+  background-color: var(--main-txt-color, #4a4128);
   color: var(--secondary-color);
 }
 
