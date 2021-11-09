@@ -373,6 +373,52 @@ button:focus,
   .project-list {
     grid-template-columns: 1fr;
   }
+
+  .page-profile {
+    flex-direction: column;
+    padding: 1px;
+  }
+
+  .page-profile__portrait {
+    margin: auto;
+  }
+
+  .page-header {
+    flex-direction: column;
+  }
+
+  .page-header__item {
+    max-width: 380px;
+    max-height: 150px;
+    width: 380px;
+    height: auto;
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    max-width: 100px;
+    width: 64px;
+    padding: 3px;
+    margin: 2px;
+  }
+
+  .button1 {
+    background-color: var(--secondary-color);
+    padding: 4px;
+    border: 2px rgba(0, 0, 0);
+    border-style: dotted;
+    border-radius: 15px;
+}
+
+.project-about {
+  padding: 1px;
+}
+
+.project-contact__second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
