@@ -408,17 +408,18 @@ button:focus,
     border: 2px rgba(0, 0, 0);
     border-style: dotted;
     border-radius: 15px;
-}
+  }
 
-.project-about {
-  padding: 1px;
-}
+  .project-about {
+    padding: 1px;
+  }
 
-.project-contact__second {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
+  .project-contact__second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
