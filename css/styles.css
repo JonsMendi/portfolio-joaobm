@@ -21,7 +21,7 @@ Native CSS Variables
 }
 
 body {
-  background-color: var(--main-bg-color, #e3dfd3); /* Fallback color IExplorer */
+  background-color: var(--main-bg-color); /* Fallback color IExplorer */
   font-family: var(--ff);
   font-weight: var(--ff-w-normal);
   font-size: var(--ff-s-body);
@@ -125,11 +125,11 @@ button:focus,
 }
 
 .page-header__item {
-  flex: 0 1 200px;
-  width: 180px;
-  height: 80px;
+  flex: 0 0 70px;
+  width: 70px;
+  height: 30px;
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* to align the hyperlinks in right site(how is defined this "last child"?)the page-header__item should not be jus the image? talking about childs why in this case is not the "page-header"? */
@@ -157,7 +157,8 @@ button:focus,
 .page-profile {
   display: flex;
   flex-direction: row;
-  max-width: 700px;
+  max-width: 100%;
+  justify-content: center;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -169,13 +170,18 @@ button:focus,
   margin-right: 40px;
   border: 1px;
   border-radius: 50%;
-  border-style: dotted;
+  border-style: solid;
   box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
   transition: all ease-in-out 0.2s;
 }
 
+.page-profile__present {
+  max-width: 250px;
+}
+
 .page-profile__text {
   padding-top: 100px;
+  padding-left: 50px;
 }
 
 .project-list__section {
