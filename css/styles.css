@@ -21,7 +21,7 @@ Native CSS Variables
 }
 
 body {
-  background-color: var(--main-bg-color, #e3dfd3); /* Fallback color IExplorer */
+  background-color: #202328; /* Fallback color IExplorer */
   font-family: var(--ff);
   font-weight: var(--ff-w-normal);
   font-size: var(--ff-s-body);
@@ -31,12 +31,14 @@ body {
 h1 {
   font-size: var(--ff-s-h1);
   font-weight: var(--ff-w-bold);
+  color: var(--tertiary-color);
   text-align: center;
 }
 
 h2 {
   font-size: var(--ff-s-h2);
   font-weight: var(--ff-w-bold);
+  color: var(--tertiary-color);
 }
 
 h3 {
@@ -44,12 +46,16 @@ h3 {
   font-weight: var(--ff-w-bold);
 }
 
+p {
+  color: var(--main-bg-color);
+}
+
 a {
-  color: var(--main-txt-color);
+  color: var(--main-bg-color);
 }
 
 a:visited {
-  color: var(--main-txt-color);
+  color: var(--main-bg-color);
 }
 
 a:hover,
@@ -93,6 +99,8 @@ button {
 
 button:hover,
 button:focus,
+.button-contact:hover,
+.button-contact:focus,
 .button1:hover,
 .button1:focus,
 .button:hover,
@@ -101,15 +109,22 @@ button:focus,
   cursor: pointer;
 
   /* educes the opacity of the button to 80% */
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .button1 {
-  background-color: var(--main-bg-color);
+  background-color: #202328;
   padding: 8px;
-  border: 2px rgba(0, 0, 0);
-  border-style: dotted;
-  border-radius: 10px;
+  border-bottom: none;
+}
+
+.button-contact {
+  background-color: var(--tertiary-color);
+  margin-top: 10px;
+  padding: 5px;
+  border: 3px;
+  border-radius: 5%;
+  transition: 0.3s opacity;
 }
 
 .button__secondary {
@@ -125,9 +140,9 @@ button:focus,
 }
 
 .page-header__item {
-  flex: 0 1 200px;
-  width: 180px;
-  height: 80px;
+  flex: 0 0 70px;
+  width: 110px;
+  height: 60px;
   margin-left: 50px;
   margin-top: 20px;
 }
@@ -136,8 +151,8 @@ button:focus,
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-  padding-right: 50px;
-  padding-top: 5px;
+  padding-right: 140px;
+  padding-top: 1px;
 }
 
 /* for the points elimination */
@@ -148,7 +163,7 @@ button:focus,
 /* just the list */
 .navigation-list li {
   display: inline-block;
-  margin-left: 30px;
+  margin-right: 25px;
 }
 
 /* The part above is made on FlexBox */
@@ -156,8 +171,9 @@ button:focus,
 /* Main Section */
 .page-profile {
   display: flex;
-  flex-direction: row;
-  max-width: 700px;
+  flex-direction: row-reverse;
+  max-width: 100%;
+  justify-content: center;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -166,22 +182,41 @@ button:focus,
 
 .page-profile__portrait {
   max-width: 300px;
-  margin-right: 40px;
-  border: 1px;
-  border-radius: 50%;
-  border-style: dotted;
+  margin-right: 60px;
+  border: 3px;
+  border-style: solid;
+  border-color: var(--tertiary-color);
   box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
   transition: all ease-in-out 0.2s;
 }
 
+.page-profile__present {
+  max-width: 250px;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.page-profile__present_what {
+  max-width: 180px;
+}
+
 .page-profile__text {
   padding-top: 100px;
+  padding-right: 100px;
+  font-size: 13px;
 }
 
 .project-list__section {
   padding-top: 50px;
 }
 
+.project-list__title {
+  display: inline-block;
+  max-width: 200px;
+  margin-top: 20px;
+  margin-left: 540px;
+  margin-bottom: 40px;
+}
 /* The part under is made on GRID */
 
 /* this is the start of the fallback */
@@ -197,7 +232,6 @@ button:focus,
 @supports (display: grid) {
   .project-list {
     display: grid;
-    background-color: rgba(159, 152, 130, 0.3);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
@@ -205,10 +239,10 @@ button:focus,
   }
 
   .project-list__item {
-    background-color: rgba(159, 152, 130, 0.3);
     padding: 5px 20px 20px;
-    border: 4px;
-    border-style: dotted;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--secondary-color);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -232,18 +266,27 @@ button:focus,
   padding: 50px;
 }
 
+.project-contact__title {
+  max-width: 200px;
+  margin-top: 20px;
+  margin-left: 490px;
+  margin-bottom: 75px;
+}
+
 .project-contact__first {
   padding: 20px;
-  border: 4px;
-  border-style: dotted;
+  color: var(--main-bg-color);
+  border: 1px;
+  border-style: solid;
+  border-color: var(--secondary-color);
   width: 300px;
   margin: auto;
 }
 
 .project-contact__first-item-two {
-  background-color: #f7f6f2;
+  background-color: var(--main-bg-color);
   padding: 5px;
-  border: 3px solid grey;
+  border: 2px solid grey;
   margin: auto;
 }
 
@@ -261,13 +304,48 @@ button:focus,
   padding: 50px;
 }
 
-.project-about__second {
-  display: inline-block;
+.page-about__first-title {
+  max-width: 200px;
+  margin-bottom: 70px;
+  margin-left: 240px;
+}
+
+.project-about__first-item:last-child {
+  text-align: justify;
+  width: 720px;
   margin: auto;
+  padding: 20px;
+}
+
+.project-about__second {
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+  max-width: 800px;
+  color: var(--main-bg-color);
+}
+
+.project-about__second-item {
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 3px;
+  border-style: solid;
+  border-color: var(--tertiary-color);
+  box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
+  transition: all ease-in-out 0.2s;
+}
+
+.project-about__second-table {
+  border: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+  width: 150px;
 }
 
 .project-about__third {
   margin-top: 50px;
+  align-items: center;
 }
 
 .page-footer {
@@ -275,6 +353,15 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-footer__socialmedia {
+  flex-direction: row;
+}
+
+.page-footer__socialmedia-item {
+  max-width: 40px;
 }
 
 .horizontal-lines {
