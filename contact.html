@@ -35,9 +35,11 @@
         <img src="img/contacting.png" class="project-contact__title" alt="contact title">
         <div class="project-contact__first">
           <!--With Labels and Input, be sure to connect them with "for="(label) and "id="(input)-->
-          <form action="#" method="post">
-            <label class="project-contact__first-item" for="contact-email">E-mail:</label>
-            <input class="project-contact__first-item-two" type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <form id="register-form" action="#" method="post">
+            <div class="input-wrapper">
+              <label class="project-contact__first-item" for="contact-email">E-mail:</label>
+              <input class="project-contact__first-item-two" type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </div>
             <!--"required" makes that the field is necessary for the data be validate-->
             <!--"Pattern" is a validation form the makes obligatorie the use, in this case of "@" to make sure that will be send an e-mail-->
             <!-- In the telephone number I decided to not use Validation to allow international number-->
@@ -68,6 +70,7 @@
 
       <div>
         <!--The link above is "tota11y" screen reader/structure corrector -->
+      <script src="js/scripts.js"></script>
       <script src="js/tota11y.min.js"></script>
       </div>
     </body>
