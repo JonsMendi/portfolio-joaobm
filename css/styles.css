@@ -181,13 +181,9 @@ button:focus,
 }
 
 .page-profile__portrait {
-  max-width: 300px;
+  max-width: 370px;
   margin-right: 60px;
-  border: 3px;
-  border-style: solid;
-  border-color: var(--tertiary-color);
-  box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
-  transition: all ease-in-out 0.2s;
+  opacity: 0.8;
 }
 
 .page-profile__present {
@@ -202,7 +198,7 @@ button:focus,
 
 .page-profile__text {
   padding-top: 100px;
-  padding-right: 100px;
+  padding-right: 150px;
   font-size: 13px;
 }
 
@@ -263,6 +259,7 @@ button:focus,
   clear: both;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 50px;
 }
@@ -270,31 +267,45 @@ button:focus,
 .project-contact__title {
   max-width: 200px;
   margin-top: 20px;
-  margin-left: 490px;
   margin-bottom: 75px;
 }
 
 .project-contact__first {
-  padding: 20px;
+  padding: 30px 20px 40px;
   color: var(--main-bg-color);
   border: 1px;
   border-style: solid;
   border-color: var(--secondary-color);
   width: 300px;
-  margin: auto;
 }
 
-.project-contact__first-item-two {
+.project-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.project-form_item {
+  padding-top: 20px;
+}
+
+.project-contact__input {
   background-color: var(--main-bg-color);
   padding: 5px;
   border: 2px solid grey;
+  border-radius: 5px;
   margin: auto;
 }
 
 .project-contact__second {
   display: flex;
-  justify-content: space-around;
-  padding: 30px 200px;
+  flex-direction: row;
+  padding-top: 40px;
+}
+
+.project-contact_second-item {
+  text-decoration: none;
+  margin: 20px;
 }
 
 .project-about {
@@ -302,46 +313,39 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 50px;
+  padding: 35px;
 }
 
-.page-about__first-title {
+.page-about-title {
   max-width: 200px;
-  margin-bottom: 70px;
-  margin-left: 240px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .project-about__first-item:last-child {
-  text-align: justify;
+  text-align: center;
   width: 720px;
   margin: auto;
   padding: 20px;
 }
 
 .project-about__second {
-  display: inline-block;
-  align-items: center;
-
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: var(--main-bg-color);
 }
 
-.project-about__second-item {
-  max-width: 250px;
-  margin: auto;
-  margin-bottom: 20px;
-  border: 3px;
-  border-style: solid;
-  border-color: var(--tertiary-color);
-  box-shadow: 0 4px 30px 0 rgba(34, 60, 80, 0.16);
-  transition: all ease-in-out 0.2s;
-}
-
 .project-about__second-table {
+  align-self: center;
+  width: 670px;
   border: 1px;
   border-color: var(--secondary-color);
   border-style: solid;
-  width: 50%;
+}
+
+.project-about__second-table__item {
+
 }
 
 .project-about__third {
@@ -369,90 +373,6 @@ button:focus,
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3));
-}
-
-/* ANIMATIONS under */
-
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change, rotation, grow;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-.cloud-front {
-  animation-duration: 20s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.cloud-back {
-  animation-duration: 10s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-/* ANIMATION color change under */
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-/* ANIMATION moving a cloud under */
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-@keyframes rotation {
-  from {
-    transform: rotateZ(0deg);
-  }
-
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(2);
-  }
 }
 
 /* Mobile Querie under */
