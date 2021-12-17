@@ -35,28 +35,31 @@
         <img src="img/contacting.png" class="project-contact__title" alt="contact title">
         <div class="project-contact__first">
           <!--With Labels and Input, be sure to connect them with "for="(label) and "id="(input)-->
-          <form id="register-form" action="#" method="post">
-            <div class="input-wrapper">
-              <label class="project-contact__first-item" for="contact-email">E-mail:</label>
-              <input class="project-contact__first-item-two" type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <form class="project-form" id="register-form" action="#" method="post">
+            <div class="project-form_item input-wrappe ">
+              <label for="contact-email">E-mail:</label>
+              <input class="project-contact__input" type="email" id="contact-email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             </div>
             <!--"required" makes that the field is necessary for the data be validate-->
             <!--"Pattern" is a validation form the makes obligatorie the use, in this case of "@" to make sure that will be send an e-mail-->
             <!-- In the telephone number I decided to not use Validation to allow international number-->
-            <label class="project-contact__first-item" for="contact-telephone">Telephone:</label>
-            <input class="project-contact__first-item-two" type="tel" id="contact-telephone">
-
-            <label class="project-contact__first-item" for="contact-message">Message:</label>
-            <textarea class="project-contact__first-item-two" maxlength="240" id="contact-message" required>Your message</textarea>
-            <input class="button-contact" type="submit" value="Send message">
+            <div class="project-form_item">
+              <label for="contact-telephone">Telephone:</label>
+              <input class="project-contact__input" type="tel" id="contact-telephone">
+            </div>
+            <div class="project-form_item">
+              <label for="contact-message">Message:</label>
+              <textarea class="project-contact__input" maxlength="240" id="contact-message" required>Your message</textarea>
+              <input class="button-contact" type="submit" value="Send message">
+            </div>
           </form>
         </div>
-          <div class="project-contact__second">
-            <a href="tel:+491744010727">Whatsapp</a>
-            <a href="skype:joaoborgesmendonca">Skype</a>
-            <a href="mailto:jborgesmendonca@gmail.com">jborgesmendonca@gmail.com</a>
-            <a href="mailto:jborgesmendonca@gmail.com">Contact me :)</a>
-          </div>
+        <div class="project-contact__second">
+          <a class="project-contact_second-item" href="tel:+491744010727">Whatsapp</a>
+          <a class="project-contact_second-item" href="skype:joaoborgesmendonca">Skype</a>
+          <a class="project-contact_second-item" href="mailto:jborgesmendonca@gmail.com">jborgesmendonca@gmail.com</a>
+          <a class="project-contact_second-item" href="mailto:jborgesmendonca@gmail.com">Contact me :)</a>
+        </div>
       </main>
       <hr class="horizontal-lines">
       <footer class="page-footer">
@@ -64,7 +67,7 @@
         <div class="page-footer__socialmedia">
           <a href="https://www.facebook.com/jborgesmendonca/" target="_blank"> <img src="img/facebook.png" class="page-footer__socialmedia-item" alt="Facebook"></a>
           <a href="https://www.instagram.com/joao.borges.mendonca/" target="_blank"> <img src="img/instagram.png" class="page-footer__socialmedia-item" alt="Instagram"></a>
-          <a href="https://www.linkedin.com/in/joão-mendonça-0288a26b/" target="_blank"> <img src="img/linkedin.png" class="page-footer__socialmedia-item" alt="Linkedin"></a>
+          <a href="https://www.linkedin.com/in/joão-borges-mendonça-0288a26b" target="_blank"> <img src="img/linkedin.png" class="page-footer__socialmedia-item" alt="Linkedin"></a>
         </div>
       </footer>
 
