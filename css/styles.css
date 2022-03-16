@@ -7,7 +7,7 @@ Native CSS Variables
   --main-txt-color: #4a4128;
   --secondary-color: #9f9882;
   --tertiary-color: #93896d;
-  --ff: 'Montserrat', sans-serif;
+  --ff: "Montserrat", sans-serif;
   --ff-w-bold: 700;
   --ff-w-normal: 400;
   --ff-s-body: 16px;
@@ -183,7 +183,7 @@ button:focus,
 .page-profile__portrait {
   max-width: 370px;
   margin-right: 60px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .page-profile__present {
@@ -345,7 +345,6 @@ button:focus,
 }
 
 .project-about__second-table__item {
-
 }
 
 .project-about__third {
@@ -372,7 +371,12 @@ button:focus,
 .horizontal-lines {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.3)
+  );
 }
 
 /* Mobile Querie under */
@@ -410,14 +414,6 @@ button:focus,
     margin: 2px;
   }
 
-  .button1 {
-    background-color: var(--secondary-color);
-    padding: 4px;
-    border: 2px rgba(0, 0, 0);
-    border-style: dotted;
-    border-radius: 15px;
-  }
-
   .project-about {
     padding: 1px;
   }
@@ -433,6 +429,23 @@ button:focus,
 @media all and (min-width: 500px) and (max-width: 750px) {
   .project-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .sandwich {
+    display: none;
+  }
+
+  .navigation-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navigation-list__item {
+    justify-content: space-around;
+  }
+
+  .testy {
+    padding: 1px;
   }
 }
 
