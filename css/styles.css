@@ -85,7 +85,6 @@ button {
 
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--secondary-color);
-  color: var(--main-txt-color);
   text-decoration: none;
 
   /* adds spacing to the button (this will be discussed more in-depth later) */
@@ -119,9 +118,9 @@ button:focus,
 }
 
 .button-contact {
-  background-color: var(--tertiary-color);
-  margin-top: 10px;
-  padding: 5px;
+  background-color: var(--secondary-color);
+  margin-top: 50px;
+  padding: 10px;
   border: 3px;
   border-radius: 5%;
   transition: 0.3s opacity;
@@ -133,6 +132,7 @@ button:focus,
 }
 
 /* The part under is made on FlexBox */
+/* Page-Header defined in all pages */
 .page-header {
   display: flex;
   width: 100%;
@@ -168,7 +168,7 @@ button:focus,
 
 /* The part above is made on FlexBox */
 
-/* Main Section */
+/* Index.html <main> */
 .page-profile {
   display: flex;
   flex-direction: row-reverse;
@@ -202,16 +202,16 @@ button:focus,
   font-size: 13px;
 }
 
+/* Work.html <main> */
+
 .project-list__section {
   padding-top: 50px;
 }
 
 .project-list__title {
-  display: inline-block;
+  display: block;
   max-width: 200px;
-  margin-top: 20px;
-  margin-left: 540px;
-  margin-bottom: 40px;
+  margin: auto;
 }
 
 /* The part under is made on GRID */
@@ -236,6 +236,7 @@ button:focus,
   }
 
   .project-list__item {
+    background-color: #1c1f24;
     padding: 5px 20px 20px;
     border: 1px;
     border-style: solid;
@@ -255,6 +256,7 @@ button:focus,
 
 /* The part above is made on Grid */
 
+/* Contact.html <main> */
 .project-contact {
   clear: both;
   display: flex;
@@ -265,31 +267,34 @@ button:focus,
 }
 
 .project-contact__title {
+  display: block;
   max-width: 200px;
-  margin-top: 20px;
-  margin-bottom: 75px;
+  margin: auto;
 }
 
 .project-contact__first {
-  padding: 30px 20px 40px;
+  background-color: #1c1f24;
+  margin-top: 30px;
+  padding: 30px;
   color: var(--main-bg-color);
   border: 1px;
   border-style: solid;
   border-color: var(--secondary-color);
-  width: 300px;
+  width: 460px;
 }
 
 .project-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .project-form_item {
-  padding-top: 20px;
+  padding: 15px;
+  margin: auto;
 }
 
 .project-contact__input {
+  display: block;
   background-color: var(--main-bg-color);
   padding: 5px;
   border: 2px solid grey;
@@ -308,6 +313,7 @@ button:focus,
   margin: 20px;
 }
 
+/* About.html <main> */
 .project-about {
   clear: both;
   display: flex;
@@ -317,16 +323,21 @@ button:focus,
 }
 
 .page-about-title {
-  max-width: 200px;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  display: block;
+  max-width: 180px;
+  margin: auto;
+  margin-top: 10px;
 }
 
-.project-about__first-item:last-child {
-  text-align: center;
-  width: 720px;
-  margin: auto;
+.project-about__first-item {
+  width: 60%;
   padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #1c1f24;
+  border: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
 }
 
 .project-about__second {
@@ -337,14 +348,14 @@ button:focus,
 }
 
 .project-about__second-table {
-  align-self: center;
-  width: 670px;
+  display: table;
+  background-color: #1c1f24;
+  width: 60%;
+  padding: 20px;
+  margin: auto;
   border: 1px;
   border-color: var(--secondary-color);
   border-style: solid;
-}
-
-.project-about__second-table__item {
 }
 
 .project-about__third {
@@ -352,6 +363,7 @@ button:focus,
   align-items: center;
 }
 
+/* Page-Footer defined in all pages */
 .page-footer {
   clear: both;
   display: flex;
@@ -382,19 +394,7 @@ button:focus,
 /* Mobile Querie under */
 
 @media all and (max-width: 500px) {
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-
-  .page-profile {
-    flex-direction: column;
-    padding: 1px;
-  }
-
-  .page-profile__portrait {
-    margin: auto;
-  }
-
+  /* <Header> */
   .page-header {
     flex-direction: column;
   }
@@ -404,6 +404,13 @@ button:focus,
     max-height: 150px;
     width: 380px;
     height: auto;
+    margin-left: auto;
+  }
+
+  .navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .navigation-list li {
@@ -414,23 +421,52 @@ button:focus,
     margin: 2px;
   }
 
-  .project-about {
-    padding: 1px;
+  /* Index.html <main> */
+  .page-profile__portrait {
+    margin: auto;
   }
 
+  .page-profile__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  .page-profile__present {
+    margin-left: 20px;
+  }
+
+  /* About.html <main> */
+  .project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-about__first-item {
+    width: 80%;
+    padding: 20px;
+  }
+
+  /* Work.html <main> */
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact.html <main> */
   .project-contact__second {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
   }
+  /* <Footer> */
+  /* empty */
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
-  .project-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  /* <Header> */
   .sandwich {
     display: none;
   }
@@ -438,18 +474,77 @@ button:focus,
   .navigation-list {
     display: flex;
     flex-direction: row;
-  }
-
-  .navigation-list__item {
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .testy {
     padding: 1px;
   }
+  /* Index.html <main> */
+  .page-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-profile__portrait {
+    margin: auto;
+  }
+
+  .page-profile__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  .page-profile__present {
+    margin-left: 20px;
+  }
+
+  /* About.html <main> */
+  /* empty */
+
+  /* Work.html <main> */
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact.html <main> */
+  /* empty */
+
+  /* <Footer> */
+  /* empty */
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
+  /* <Header> */
+  .navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+  /* Index.html <main> */
+  .page-profile__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  .page-profile__present {
+    margin-left: 20px;
+  }
+
+  /* About.html <main> */
+  /* empty */
+
+  /* Work.html <main> */
   .project-list {
     grid-gap: 10px;
   }
@@ -459,7 +554,42 @@ button:focus,
     grid-row: auto / auto;
   }
 
-  h1 {
-    font-size: 22px;
+  /* Contact.html <main> */
+  /* empty */
+
+  /* <Footer> */
+  /* empty */
+}
+
+@media all and (max-width: 1124px) {
+  /* <Header> */
+  .navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
+
+  /* Index.html <main> */
+  .page-profile__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  .page-profile__present {
+    margin-left: 20px;
+  }
+
+  /* About.html <main> */
+  /* empty */
+
+  /* Work.html <main> */
+  /* empty */
+
+  /* Contact.html <main> */
+  /* empty */
+
+  /* <Footer> */
+  /* empty */
 }
