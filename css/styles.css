@@ -14,6 +14,8 @@ Native CSS Variables
   --ff-s-h1: 30px;
   --ff-s-h2: 24px;
   --ff-s-h3: 18px;
+  --ff-s-h4: 14px;
+  --ff-s-h5: 12px;
 }
 
 * {
@@ -44,6 +46,13 @@ h2 {
 h3 {
   font-size: var(--ff-s-h3);
   font-weight: var(--ff-w-bold);
+  color: var(--tertiary-color);
+}
+
+h5 {
+  font-size: var(--ff-s-h5);
+  font-weight: var(--ff-w-bold);
+  color: var(--tertiary-color);
 }
 
 p {
@@ -389,6 +398,93 @@ button:focus,
     rgba(0, 0, 0, 0.85),
     rgba(0, 0, 0, 0.3)
   );
+}
+
+/* Case Study under */
+
+.case-study_main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.case-study_title {
+  display: flex;
+  justify-content: center;
+}
+
+.case-study_introduction {
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+}
+
+.case-study_explanation {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}
+
+.case-study_end {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+
+.case-study_picture_main {
+  display: flex;
+  justify-content: center;
+}
+
+.case-study_picture_main_element {
+  width: 160px;
+  opacity: 0.7;
+  box-shadow: 0 0 20px 5px;
+}
+
+.case-study_picture_main-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.case-study_picture_main_element_two {
+  width: 500px;
+  margin: 10px;
+  opacity: 0.8;
+  box-shadow: 0 0 20px 5px;
+}
+
+.case-study_explanation {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.case-study_approach {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.case-study_challenges {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.case-study_picture_main-three {
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+}
+
+.case-study_picture_main_element_three {
+  width: 300px;
+  margin: 10px;
+  opacity: 0.8;
+  box-shadow: 0 0 20px 5px;
 }
 
 /* Mobile Querie under */
