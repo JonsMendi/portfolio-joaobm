@@ -419,6 +419,14 @@ button:focus,
   margin: 60px;
 }
 
+.case-study_introduction-first {
+  margin-right: 30px;
+}
+
+.case-study_introduction-second {
+  margin-left: 30px;
+}
+
 .case-study_explanation {
   display: flex;
   flex-direction: column;
@@ -447,6 +455,7 @@ button:focus,
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
+  margin-right: -10px;
 }
 
 .case-study_picture_main_element_two {
