@@ -22,6 +22,10 @@ Native CSS Variables
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #202328; /* Fallback color IExplorer */
   font-family: var(--ff);
@@ -143,9 +147,12 @@ button:focus,
 /* The part under is made on FlexBox */
 /* Page-Header defined in all pages */
 .page-header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
   display: flex;
   width: 100%;
-  margin: 20px;
+  background-color: #202328;
 }
 
 .page-header__item {
@@ -177,16 +184,17 @@ button:focus,
 
 /* The part above is made on FlexBox */
 
-/* Index.html <main> */
+/*************** Start section ***************/
 .page-profile {
   display: flex;
   flex-direction: row-reverse;
   max-width: 100%;
   justify-content: center;
-  margin: auto;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 170px;
 }
 
 .page-profile__portrait {
@@ -198,7 +206,6 @@ button:focus,
 .page-profile__present {
   max-width: 250px;
   text-align: left;
-  margin-left: 100px;
 }
 
 .page-profile__present_what {
@@ -211,16 +218,18 @@ button:focus,
   font-size: 13px;
 }
 
-/* Work.html <main> */
+/**************** Work section ***************/
 
 .project-list__section {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .project-list__title {
   display: block;
-  max-width: 200px;
+  max-width: 280px;
   margin: auto;
+  margin-bottom: 200px;
+  margin-top: 70px;
 }
 
 /* The part under is made on GRID */
@@ -244,7 +253,7 @@ button:focus,
     padding: 30px;
   }
 
-  .project-list__item {
+  /* .project-list__item {
     background-color: #1c1f24;
     padding: 5px 20px 20px;
     border: 1px;
@@ -253,7 +262,7 @@ button:focus,
     width: auto;
     min-height: auto;
     margin: 0;
-  }
+  } */
 }
 
 /* This is an example how to manipulate childs(individuals)
@@ -265,77 +274,113 @@ button:focus,
 
 /* The part above is made on Grid */
 
-/* Contact.html <main> */
-.project-contact {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px;
+.project-project {
+  margin-top: -130px;
+  margin-bottom: 135px;
+  width: 100%;
+  display: grid;
 }
 
-.project-contact__title {
-  display: block;
-  max-width: 200px;
-  margin: auto;
+
+
+.project__img {
+  width: 70%;
+  transition: all 500ms ease;
+  border-radius: 2%;
+  opacity: 0.9;
 }
 
-.project-contact__first {
+.project-wrapper {
+  
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
   background-color: #1c1f24;
-  margin-top: 30px;
-  padding: 30px;
-  color: var(--main-bg-color);
+  padding: 5px 20px 20px;
   border: 1px;
   border-style: solid;
   border-color: var(--secondary-color);
-  width: 460px;
+  width: auto;
+  min-height: auto;
+  margin: 0;
 }
 
-.project-form {
-  display: flex;
-  flex-direction: column;
+.project-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #12131b;
+  opacity: 0;
+  transition: all 450ms ease;
+  z-index: 2;
+  transform: translateY(100%);
 }
 
-.project-form_item {
-  padding: 15px;
-  margin: auto;
+.project-project:hover .project-wrapper:before {
+  transform: translateY(0);
+  opacity: 0.7;
 }
 
-.project-contact__input {
-  display: block;
-  background-color: var(--main-bg-color);
-  padding: 5px;
-  border: 2px solid grey;
-  border-radius: 5px;
-  margin: auto;
+.project-project:hover .project__img {
+  transform: scale(1.05);
+  filter: blur(5px);
 }
 
-.project-contact__second {
-  display: flex;
-  flex-direction: row;
-  padding-top: 40px;
+.project-project:hover .project-description {
+  opacity: 0.9;
+  transform: translateY(-50%);
 }
 
-.project-contact_second-item {
-  text-decoration: none;
-  margin: 20px;
+.project-description {
+  position: absolute;
+  left: 20px;
+  top: 45%;
+  width: 600px;
+  transform: translateY(100%);
+  z-index: 3;
+  opacity: 0;
+  transition: transform 450ms, opacity 300ms;
 }
 
-/* About.html <main> */
+.project__description-title {
+  font-size: 20px;
+}
+
+.project__description-p {
+  margin: 16px 0;
+  font-size: 12px;
+}
+
+.project__description-link {
+  font-size: 5px;
+  margin-right: 16px;
+}
+
+.project__description-title,
+.project__description-subtitle,
+.project__description-p,
+.project__description-link {
+  text-align: left;
+}
+
+/**************** About section ****************/
 .project-about {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 35px;
+  margin-bottom: 100px;
 }
 
 .page-about-title {
   display: block;
-  max-width: 180px;
+  max-width: 250px;
   margin: auto;
-  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .project-about__first-item {
@@ -354,17 +399,7 @@ button:focus,
   flex-direction: column;
   justify-content: center;
   color: var(--main-bg-color);
-}
-
-.project-about__second-table {
-  display: table;
-  background-color: #1c1f24;
-  width: 60%;
-  padding: 20px;
-  margin: auto;
-  border: 1px;
-  border-color: var(--secondary-color);
-  border-style: solid;
+  margin-top: 50px;
 }
 
 .project-about__third {
@@ -372,22 +407,68 @@ button:focus,
   align-items: center;
 }
 
-/* Page-Footer defined in all pages */
+.project-about__skills-title {
+  margin-bottom: 50px;
+  color: #645C46;
+}
+
+.skill-images-group-block {
+ display: grid;
+ justify-content: center;
+}
+
+.skills-images-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  margin-left: 180px;
+  
+}
+
+.skills-images-item {
+  margin-right: 170px;
+}
+
+.skill-images {
+  width: 70px;
+}
+/**************** Contact section ***************/
+
+.page-footer-title {
+  margin-bottom: 50px;
+}
+
+.page-footer-text {
+  margin-bottom: 30px;
+}
+
+.project-contact__title {
+  display: block;
+  max-width: 280px;
+  margin-bottom: 500px;
+  margin: auto;
+}
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 100px;
 }
-
 .page-footer__socialmedia {
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .page-footer__socialmedia-item {
-  max-width: 40px;
+  max-width: 80px;
 }
+
+
 
 .horizontal-lines {
   border: 0;
@@ -400,7 +481,7 @@ button:focus,
   );
 }
 
-/* Case Study under */
+/*************** Case Study under ***************/
 
 .case-study_main {
   display: flex;
@@ -496,6 +577,14 @@ button:focus,
   box-shadow: 0 0 20px 5px;
 }
 
+/*************** Back-to-top Section under ***************/
+
+.back-to-top-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* Mobile Querie under */
 
 @media all and (max-width: 500px) {
@@ -554,6 +643,19 @@ button:focus,
     padding: 20px;
   }
 
+  .skills-images-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+ 
+
+  .skill-images {
+    width: 70px;
+  }
+
   /* Work.html <main> */
   .project-list {
     grid-template-columns: 1fr;
@@ -609,7 +711,21 @@ button:focus,
   }
 
   /* About.html <main> */
-  /* empty */
+  .skills-images-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    margin-right: 100px;
+  }
+
+  .skills-images-item {
+    margin-right: 60px;
+  }
+
+  .skill-images {
+    width: 70px;
+  }
 
   /* Work.html <main> */
   .project-list {
@@ -659,6 +775,22 @@ button:focus,
     grid-row: auto / auto;
   }
 
+  .skills-images-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    margin-right: 100px;
+  }
+
+  .skills-images-item {
+    margin-right: 60px;
+  }
+
+  .skill-images {
+    width: 70px;
+  }
+
   /* Contact.html <main> */
   /* empty */
 
@@ -690,7 +822,21 @@ button:focus,
   /* empty */
 
   /* Work.html <main> */
-  /* empty */
+  .skills-images-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    margin-right: 100px;
+  }
+
+  .skills-images-item {
+    margin-right: 100px;
+  }
+
+  .skill-images {
+    width: 70px;
+  }
 
   /* Contact.html <main> */
   /* empty */
