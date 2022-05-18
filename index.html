@@ -4,36 +4,41 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Portfolio - João Mendonça</title>
+      <title>João Mendonça</title>
       <link rel="shSortcut icon" href="img/joao-favicon-32x32.png">
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
+
+    <!-------------------- NAVBAR ------------------>
+
       <header class="page-header">
         <img src="img/joao-cookingcode-logo_v5.png" alt="Personal logo of Joao Borges Mendonca, Text logo that consists my name" class="sandwich page-header__item">
-          <nav class="main-navigation page-header__item">
+          <nav class="page-header__item">
             <ul role="menubar" class="navigation-list">
               <li role="presentation">
-                <a href="#" role="menuitem" class="navigation-list__item navigation-list__item--active button1">HOME</a>
+                <a href="#" role="menuitem" class="navigation-list__item navigation-list__item--active button1" alt="Button to access home section">HOME</a>
               </li>
               <li role="presentation">
-                <a href="#about" role="menuitem" class="navigation-list__item button1 testy">MYSELF</a>
+                <a href="#about" role="menuitem" class="navigation-list__item button1 testy" alt="Button to access myself section">MYSELF</a>
               </li>
               <li role="presentation">
-                <a href="#work" role="menuitem" class="navigation-list__item button1">WORK</a>
+                <a href="#work" role="menuitem" class="navigation-list__item button1" alt="Button to access work section">WORK</a>
               </li>
               <li role="presentation">
-                <a href="#contact" role="menuitem" class="navigation-list__item button1">CONTACT</a>
+                <a href="#contact" role="menuitem" class="navigation-list__item button1" alt="Button to access contact section">CONTACT</a>
               </li>
             </ul>
           </nav>
       </header>
 
+    <!-------------------- HOME ------------------>
+
       <section id="start">
         <div class="page-profile">
-          <img src="img/joaobm12 copy 2.png" class="page-profile__portrait" alt="Joao Mendonca Portrait">
+          <img src="img/joao-main-portrait.png" class="page-profile__portrait" alt="Joao Mendonca Portrait">
           <div class="page-profile__text">
             <img src="img/joao-present.png" class="page-profile__present " alt="Portfolio owner name, Joao">
             <img src="img/joao-present_work.png" class="page-profile__present_what " alt="What Joao does">
@@ -44,71 +49,99 @@
         </div>
       </section>
 
-      <hr class="horizontal-lines">
+    <!-------------------- ABOUT ME ------------------>
 
       <section id="about">
         <div class="project-about">
           <div class="page-about__first">
-            <img src="img/myself.png" class="page-about-title" alt="myself title">
+            <div class="project-titles">
+            <!-- <img src="img/myself.png" class="page-about-title" alt="myself title">   -->
+            <h1>Myself</h1>
+            </div>
+            <div class="project-about__first-item__wrapper">
             <div class="project-about__first-item">
+              <h2>Experience</h2>
               <p>
-                Born in the Azores the Portuguese Islands, and living at the moment in Berlin I've been traveling
-                all over the World. I was born into a family environment surrounded more by nature than people. 
-                Early on I fell in love with design and construction heavily influenced by my mother's fantastic
-                drawings and my grandfather's projects. I followed my path through Arts and Crafts education towards
-                a degree in incredible architecture. As time went by, I started having a romantic affair with 
-                technology which led me to Web Development. Today I do construction and digital design in an
-                ever-growing world.
+                With a background in Michelin-Star Restaurants and Architecture. My ever passion
+                for technology simultaneously with the dimension token by the tech industry in 
+                the last years converted this passion into a personal goal. From my experience 
+                in Gastronomy and Architecture, I understand the importance of teamwork to reach
+                a goal. In addition, I acquire empathy and comprehension for constant research and
+                problem solving where creativity is always imperious. 
               </p>
-             <div class="project-about__third">
-              <a href="img/resume-joao copy.pdf" class="button" target="_blank" download>Download my CV</a>
+            </div>  
+            <div class="project-about__first-item">
+              <h2>Goal</h2>
+              <p>
+                I always guided myself through challenges aiming to improve my skills every day. 
+                Due to my experience providing innovative and quality user experiences, I am aspiring 
+                to development opportunities that can modernize my logical and creative methods, to 
+                continue providing value through the implementation of web applications.
+              </p>
+            </div> 
+            <div class="project-about__first-item">
+              <h2>Hobbies</h2>
+              <p>
+                Being from the Azores and living in Berlin, I appreciate going for walks in parks or the
+                beautiful nature of Brandenburg. Gathering with friends and family it's as well a big part
+                of my priorities when having some free time, and not less important, sports have a dose
+                of importance and I try to keep a routine going for Bouldering or playing Basketball! 
+              </p>
             </div> 
             </div>
+             <div >
+              <a href="img/resume-joao copy.pdf" class="button" target="_blank" download>Download my résumé</a>
+            </div> 
+    
           </div>
-          <div class="project-about__second">
-           
-            <h2 class="project-about__skills-title">Skills</h2>
+          
+    <!-------------------- SKILLS ------------------>
+
+          <div class="project-about__second"> 
+            <div class="project-titles">
+             <h1>Skills</h1>  
+            </div>
             <div class="skill-images-group-block">
               <div class="skills-images-group">
                 <div class="skills-images-item">
-                 <img src="img/skill/htmlog.png" class="skill-images" alt="">
-                 <h4>HTML</h4>
+                 <img src="img/skill/htmlog.png" class="skill-images" alt="HTML logo">
+                 <h2 class="skills-description" style="margin-top: 25px;">HTML</h2>
                 </div>
                 <div class="skills-images-item">
-                  <img src="img/skill/css.png" class="skill-images" alt="">
-                  <h4>CSS</h4>
+                  <img src="img/skill/css.png" class="skill-images" alt="CSS logo">
+                  <h2 class="skills-description" style="margin-top: 20px;">CSS</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/jslogo.png" class="skill-images" alt="">
-                  <h4>JavaScript</h4>
+                  <img src="img/skill/jslogo.png" class="skill-images" alt="JavaScript logo">
+                  <h2 class="skills-description" style="margin-top: 35px;">JavaScript</h2>
                  </div>
                 <div class="skills-images-item">
-                  <img src="img/skill/reaaact.png" class="skill-images" alt="">
-                  <h4>React</h4>
+                  <img src="img/skill/reaaact.png" class="skill-images" alt="React.js logo">
+                  <h2 class="skills-description" style="margin-top: 43px;">React</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/angular_solidBlack.png" class="skill-images" alt="">
-                  <h4>Angular</h4>
+                  <img src="img/skill/angular_solidBlack.png" class="skill-images" alt="Angular.js logo">
+                  <h2 class="skills-description" style="margin-top: 32px;">Angular</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/nodelogo.png" class="skill-images" alt="">
-                  <h4>Node</h4>
+                  <img src="img/skill/nodelogo.png" class="skill-images" alt="Node.js logo">
+                  <h2 class="skills-description" style="margin-top: 37px;">Node</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/mongologo.png" class="skill-images" alt="">
-                  <h4>MongoDB</h4>
+                  <img src="img/skill/mongologo.png" class="skill-images" alt="MongoDB logo">
+                  <h2 class="skills-description" style="margin-top: 12px;">MongoDB</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/tslogo.png" class="skill-images" alt="">
-                  <h4>TypeScript</h4>
+                  <img src="img/skill/tslogo.png" class="skill-images" alt="TypeScript logo">
+                  <h2 class="skills-description" style="margin-top: 41px;">TypeScript</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/ex.png" class="skill-images" alt="">
-                  <h4>Express</h4>
+                  <img src="img/skill/ex.png" class="skill-images" alt="Express logo">
+                  <h2 class="skills-description" style="margin-top: 40px;">Express</h2>
                  </div>
                  <div class="skills-images-item">
-                  <img src="img/skill/githublogo.png" class="skill-images" alt="">
-                  <h4>Github</h4>
+                  <img src="img/skill/githublogo.png" class="skill-images" alt="GitHub logo">
+                  <h2 class="skills-description" style="margin-top: 40px;">Github</h2>
                  </div>
               </div>
             </div>
@@ -116,28 +149,30 @@
         </div>
       </section>
 
-      <hr class="horizontal-lines">
+    <!-------------------- WORK ------------------>
 
       <section id="work">
         <div class="project-list__section">
-          <img src="img/working.png" class="project-list__title" alt="working title">
-
+          <div class="project-titles">
+            <h1>Projects</h1>
+          </div>
+          
           <div class="project-list ">
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/projects/pokedex.png" class="project__img" style="width: 350px;height: 170px; margin-top: 40px" alt="">
+              <img src="img/projects/pokedex.png" class="project__img" style="width: 350px;height: 170px; margin-top: 40px" alt="Pokedex project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">Pokédex</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: HTML, CSS, JavaScript, Bootstrap<br> and JQuery
-                </h5>
+                <h2 class="project__description-title">Pokédex</h2>
+                <h3 class="project__description-subtitle">
+                  Built : HTML, CSS, JavaScript, Bootstrap<br> and JQuery
+                </h3>
                 <p class="project__description-p">
                   Within this Project, was built a small web page using<br> an external API to fetch information.
                   Details can be<br> displayed in a modal by clicking on a pokemon's name.
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/Pokedex-app" target="_blank">GitHub</a>
-                  <a href="https://jonsmendi.github.io/Pokedex-app/" target="_blank">Live</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/Pokedex-app" target="_blank" alt="Pokedex Github link access">GitHub</a>
+                  <a class="button-projects" href="https://jonsmendi.github.io/Pokedex-app/" target="_blank" alt="Pokedex live link access">Live</a>
                 </div>
               </div>
             </div>
@@ -145,18 +180,18 @@
 
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/projects/postman.png" style="width: 350px; margin-top: 40px" class="project__img" alt="">
+              <img src="img/projects/postman.png" style="width: 350px; margin-top: 40px" class="project__img" alt="Movie API project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">Movie API (Back-End)</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: Node.js, Express.js and MongoDB
-                </h5>
+                <h2 class="project__description-title">Movie API (Back-End)</h2>
+                <h3 class="project__description-subtitle">
+                  Built : Node.js, Express.js and MongoDB
+                </h3>
                 <p class="project__description-p">
                   Within this project, was built with an API and a Database<br> that allow and generates information for the Movie<br> front-end projects.
                   In this project Authentication is<br> controlled with passport. Passwords are hashed using bcrypt. The login request will bear a JWToken to be used in each endpoint. 
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/movie_api" target="_blank">GitHub</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/movie_api" target="_blank" alt="movie API Github link access">GitHub</a>
                 </div>
               </div>
             </div>
@@ -164,20 +199,20 @@
           
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/movie-lists.png" style="width: 350px; height: 170px; margin-top: 40px" class="project__img" alt="">
+              <img src="img/movie-lists.png" style="width: 350px; height: 170px; margin-top: 40px" class="project__img" alt="MyMovies project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">MyMovies(Front-End)</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: React, JavaScript, CSS and Bootstrap
-                </h5>
+                <h2 class="project__description-title">MyMovies(Front-End)</h2>
+                <h3 class="project__description-subtitle">
+                  Built : React, JavaScript, CSS and Bootstrap
+                </h3>
                 <p class="project__description-p">
                   Within this Project, was built a full stack web application<br> that utilizes the MERN stack.
                   The app allows users to create<br> a profile, see a list of movies, click on them for genre<br> and directors information.
                   After creating an account, users<br> can change their user info as well as create and edit a list of<br> their personal favorite movies.
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/myMovies-client/tree/dev" target="_blank">GitHub</a>
-                  <a href="case-study.html">Case Study</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/myMovies-client/tree/dev" target="_blank" alt="MyMovies Github link access">GitHub</a>
+                  <a class="button-projects" href="case-study.html" alt="MyMovies case study link access">Case Study</a>
                 </div>
               </div>
             </div>
@@ -185,20 +220,20 @@
 
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/projects/meetapp.png" style="width: 350px;height: 170px; margin-top: 40px" class="project__img" alt="">
+              <img src="img/projects/meetapp.png" style="width: 350px;height: 170px; margin-top: 40px" class="project__img" alt="MeetYour app project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">MeetYour App</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: JavaScript, HTML, CSS, React<br> and AWS Lambda
-                </h5>
+                <h2 class="project__description-title">MeetYour App</h2>
+                <h3 class="project__description-subtitle">
+                  Built : JavaScript, HTML, CSS, React<br> and AWS Lambda
+                </h3>
                 <p class="project__description-p">
                   Within this Project, was created a serverless, progressive<br> Web Apllication (PWA) built
                   with React using a test-driven<br> development (TDD) technique. It uses the Google Calendar<br>
                   API to fetch upcoming events.
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/meet" target="_blank">GitHub</a>
-                  <a href="https://jonsmendi.github.io/meet/" target="_blank">Live</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/meet" target="_blank" alt="MeetYour app Github link access">GitHub</a>
+                  <a class="button-projects" href="https://jonsmendi.github.io/meet/" target="_blank" alt="MeetYour app live link access">Live</a>
                 </div>
               </div>
             </div>
@@ -206,12 +241,12 @@
 
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/projects/chatapp.png" style="height: 200px; width: 100px; margin-left: 130px; margin-top: 30px;" class="project__img" alt="">
+              <img src="img/projects/chatapp.png" style="height: 200px; width: 100px; margin-left: 130px; margin-top: 30px;" class="project__img" alt="ChatApp project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">ChatApp</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: JavaScript, HTML, CSS and React
-                </h5>
+                <h2 class="project__description-title">ChatApp</h2>
+                <h3 class="project__description-subtitle">
+                  Built : JavaScript, HTML, CSS and React
+                </h3>
                 <p class="project__description-p">
                   Within this project was build a React Native application with<br> Gifted Chat. 
                   Users can pick a background color, read and<br> send messages, share images and their location. 
@@ -219,7 +254,7 @@
                   Message data is stored<br> in Cloud Firestore.
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/ChatApp" target="_blank">GitHub</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/ChatApp" target="_blank" alt="ChatApp Github link access">GitHub</a>
                 </div>
               </div>
             </div>
@@ -227,56 +262,62 @@
 
           <div class="project-project">
             <div class="project-wrapper"> 
-              <img src="img/projects/myFlix.png" style="width: 350px;height: 170px; margin-top: 40px" class="project__img" alt="">
+              <img src="img/projects/myFlix.png" style="width: 350px;height: 170px; margin-top: 40px" class="project__img" alt="myFlix Angular project picture">
               <div class="project-list__item project-description">
-                <h3 class="project__description-title">MyFlix-Angular</h3>
-                <h5 class="project__description-subtitle">
-                  Created with: HTML, CSS, Angular, Typescript
-                </h5>
+                <h2 class="project__description-title">MyFlix-Angular</h2>
+                <h3 class="project__description-subtitle">
+                  Built : HTML, CSS, Angular, Typescript
+                </h3>
                 <p class="project__description-p">
                   The Angular front-end version of myMovies. This project<br> was built using Angular Material and Typescript and works<br> with the myFlix API.
                 </p>
                 <div class="project__description--inks">
-                  <a href="https://github.com/JonsMendi/myFlix-Angular-client" target="_blank">GitHub</a>
-                  <a href="https://jonsmendi.github.io/myFlix-Angular-client/welcome" target="_blank">Live</a>
+                  <a class="button-projects" href="https://github.com/JonsMendi/myFlix-Angular-client" target="_blank" alt="myFlix Angular Github link access">GitHub</a>
+                  <a class="button-projects" href="https://jonsmendi.github.io/myFlix-Angular-client/welcome" target="_blank" alt="myFlix Angular live link access">Live</a>
                 </div>
               </div>
             </div>
           </div>
-
           </div>
         </div>
       </section>
 
-      <hr class="horizontal-lines">
+    <!-------------------- CONTACT ME ------------------>
+
       <section id="contact">
-        <footer class="page-footer">
-          <div class="page-footer-title">
-           <img src="img/contacting.png" class="project-contact__title" alt="contact">
+        <div class="contact-wrapper">
+          <div class="project-titles">
+           <!-- <img src="img/contacting.png" class="project-contact__title" alt="contact"> -->
+           <h1 class="contact-title">Contact Me</h1>
           </div>
-          <div class="page-footer-text">
+          <div class="contact-text">
             <p>Are you interested in knowing something more about me? Do not wait any longer and get in touch<br> using one of the forms attached and I will be happy to clarify anything.</p>
           </div>  
-          <div class="page-footer__socialmedia"> 
-            <div>
-             <h3>Location</h3>
-            <p>Berlin, Germany</p> 
+          <div class="contact-social-media"> 
+            <div>         
+              <a href="https://www.linkedin.com/in/jbm0288a26b/" target="_blank"> <img src="img/linkedin.png" class="contact-social-media__item button-social-media" alt="Personal Linkedin link access"></a>  
             </div>
             <div>
-              <h3>LinkedIn</h3>           
-              <a href="https://www.linkedin.com/in/jbm0288a26b/" target="_blank"> <img src="img/linkedin.png" class="page-footer__socialmedia-item" alt="Linkedin"></a>  
+              <a href="https://github.com/JonsMendi" target="_blank"> <img src="img/github.png" style="width: 45px;" class="contact-social-media__item button-social-media button-social-media" alt="Personal Github link access"></a> 
             </div>
             <div>
-              <h3>GitHub</h3>
-              <a href="https://github.com/JonsMendi" target="_blank"> <img src="img/github.png" style="width: 55px;" class="page-footer__socialmedia-item" alt="Github"></a> 
+              <a href="https://twitter.com/joborgesm" target="_blank"> <img src="img/twitterlogo.png" style="width: 50px;" class="contact-social-media__item button-social-media" alt="Personal Twitter link access"></a> 
             </div>
             <div>
-              <h3>Mail</h3>
-              <a href="mailto: jborgesmendonca@gmail.com" target="_blank"> <img src="img/mail.png" style="width: 55px;" class="page-footer__socialmedia-item" alt="Gmail"></a>  
+              <a href="mailto: jborgesmendonca@gmail.com" target="_blank"> <img src="img/mail.png" style="width: 45px;" class="contact-social-media__item button-social-media" alt="Personal Gmail link access"></a>  
+            </div>
+            <div>
+              <a href="https://medium.com/@jborgesmendonca" target="_blank"> <img src="img/mediumlogo.png" class="contact-social-media__item button-social-media" style="width: 45px;"  alt="Personal Medium link access"></a> 
             </div>
             
           </div>
-        </footer>
+        </div>
+      </section>
+
+      <section id="#footer">
+        <div class="footer-text">
+          <p>Copyright © João Borges Mendonça 2022 </p>
+        </div>
       </section>
       <div>
         <!--The link above is "tota11y" screen reader/structure corrector -->
