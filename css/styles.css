@@ -131,79 +131,153 @@ button:focus,
 }
 
 /*************** Header section ***************/
-.page-header {
+
+header {
   position: fixed;
   top: 0;
-  z-index: 4;
+  right: 0;
   display: flex;
+  justify-content: space-between;
   width: 100%;
-  background-color: #202328;
+  background: inherit;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
 }
 
-.page-header__item {
-  flex: 0 0 70px;
-  width: 110px;
-  height: 60px;
-  margin-left: 50px;
-  margin-top: 15px;
+.sandwich {
+  width: 80px;
+  height: 45px;
+  margin-top: 25px;
+  margin-left: 25px;
   margin-bottom: 15px;
 }
 
-.page-header__item:last-child {
-  flex-grow: 1;
-  text-align: right;
-  padding-right: 50px;
-  padding-top: 1px;
+#toggle {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* for the points elimination */
-.navigation-list {
-  list-style-type: none;
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #93896d;
+  transform: translateY(-5px);
+  transition: 0.2s;
 }
 
-/* just the list */
-.navigation-list li {
+#toggle::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #93896d;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+#toggle.active {
+  background: inherit;
+}
+
+#navbar {
+  position: relative;
+  height: 60px;
+  right: 60px;
+  background: inherit;
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+
+#navbar.active {
+  width: 540px;
+}
+
+#navbar ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #93896d;
+  height: 60px;
+  line-height: 60px;
   display: inline-block;
-  margin-right: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  letter-spacing: 2px;
+  border: none;
 }
 
-/* The part above is made on FlexBox */
+#navbar ul li a:hover {
+  opacity: 0.5;
+  background: none;
+  border: none;
+
+}
 
 /*************** Start section ***************/
 .page-profile {
   display: flex;
-  flex-direction: row-reverse;
-  max-width: 100%;
   justify-content: center;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 100px;
-  margin-bottom: 200px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .page-profile__portrait {
   opacity: 0.7;
 }
 
+.page-profle__present-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-left: 190px;
+}
+
 .page-profile__present {
-  max-width: 250px;
-  text-align: left;
+  font-size: 40px;
+  font-stretch: wider;
+  color: white;
 }
 
 .page-profile__present_what {
-  max-width: 180px;
+  margin-top: 53px;
 }
 
 .page-profile__text {
-  padding-top: 100px;
-  padding-right: 150px;
   font-size: 13px;
+  text-align: center;
 }
 
 .page-profile__from {
   color: #ebe8e0;
-  padding-right: 100px;
+  margin-top: -20px;
+  margin-left: 190px;
 }
 
 /**************** About section ****************/
@@ -213,6 +287,7 @@ button:focus,
   flex-direction: column;
   text-align: center;
   margin-bottom: 100px;
+  max-width: 100%;
 }
 
 .page-about__first {
@@ -229,7 +304,7 @@ button:focus,
 }
 
 .project-about__first-item {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   margin: auto;
   margin-top: 30px;
@@ -254,11 +329,12 @@ button:focus,
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin-left: 100px;
+  
 }
 
 .skills-images-item {
-  margin-right: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .skill-images {
@@ -274,14 +350,6 @@ button:focus,
 .project-list__section {
   padding-top: 10px;
   background-color: #ebe8e0;
-}
-
-.project-list__title {
-  display: block;
-  max-width: 280px;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 70px;
 }
 
 /* The part under is made on GRID */
@@ -319,7 +387,8 @@ button:focus,
 
 
 .project__img {
-  width: 70%;
+  width: 350px;
+  margin-top: 50px;
   transition: all 500ms ease;
   border-radius: 2%;
   opacity: 0.9;
@@ -385,9 +454,14 @@ button:focus,
   font-size: 20px;
 }
 
+.project__description-subtitle {
+  width: 350px;
+}
+
 .project__description-p {
   margin: 16px 0;
   font-size: 12px;
+  width: 350px;
 }
 
 .project__description-link {
@@ -426,12 +500,14 @@ button:focus,
 .contact-social-media {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .contact-social-media__item {
-  max-width: 60px;
+  max-width: 67px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .button-social-media {
@@ -564,179 +640,249 @@ button:focus,
 
 /* Mobile Querie under */
 
-@media all and (max-width: 500px) {
-  /* <Header> */
-  .page-header {
-    display: flex;
+
+@media all and (max-width: 1124px) {
+  /**************  Header Section  **************/
+
+  /* nav ul {
+    margin-right: 30px;
+  } */
+
+  /**************  Work Section  **************/
+  .project-list {
+    grid-template-columns: 1fr 1fr;
   }
 
-  /* Index.html <main> */
-  .page-profile__portrait {
-    margin: auto;
+  .project__img {
+    margin-left: 40px;
   }
-
-  .page-profile__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 150px;
-  }
-
-  .page-profile__present {
-    margin-left: 20px;
-  }
-
-  /* About.html <main> */
-  /* empty */
-
-  /* Work.html <main> */
-  /* empty */
-
-  /* Contact.html <main> */
-  .project-contact__second {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-  }
-  /* <Footer> */
-  /* empty */
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  /* <Header> */
-  .sandwich {
-    display: none;
-  }
-
-  .navigation-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .testy {
-    padding: 1px;
-  }
-  /* Index.html <main> */
-  .page-profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .page-profile__portrait {
-    margin: auto;
-  }
-
-  .page-profile__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 150px;
-  }
-
-  .page-profile__present {
-    margin-left: 20px;
-  }
-
-  /* About.html <main> */
-  /* empty */
-
-  /* Work.html <main> */
-  /* empty */
-
-  /* Contact.html <main> */
-  /* empty */
-
-  /* <Footer> */
-  /* empty */
 }
 
 @media all and (max-width: 768px) {
-  /* <Header> */
-  .navigation-list {
+  /**************  Header Section  **************/
+
+  #navbar {
+    position: fixed;
+    bottom: -100%;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
   }
 
-  h1 {
-    font-size: 22px;
+  #navbar.active {
+    height: calc(100vh - 60px);
+    bottom: 0;
+    width: 100%;
   }
-  /* Index.html <main> */
-  .page-profile__text {
+
+  #navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /**************  Presentation Section  **************/
+
+  .page-profile__portrait {
+    width: 300px;
+  }
+ 
+  .page-profle__present-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: 150px;
+    margin-left: 60px;
   }
-
+  
   .page-profile__present {
-    margin-left: 20px;
+    font-size: 30px;
+  }
+  
+  .page-profile__present_what {
+    margin-top: -20px;
+  }
+  
+  .page-profile__from {
+    margin-left: 60px;
+    margin-top: 2px;
   }
 
-  /* About.html <main> */
+  /**************  About Section  **************/
   .project-about__first-item__wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  /* Work.html <main> */
-  /* empty */
-
-  .skills-images-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  /* Contact.html <main> */
-  /* empty */
-
-  /* <Footer> */
-  /* empty */
-}
-
-@media all and (max-width: 1124px) {
-  /* <Header> */
-  .navigation-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  /* Index.html <main> */
-  .page-profile__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 150px;
-  }
-
-  .page-profile__present {
+  .skills-images-item {
+    margin-right: 20px;
     margin-left: 20px;
   }
 
-  .page-profile__from {
-    color: #ebe8e0;
-    padding-right: 0;
+  /**************  Work Section  **************/
+
+  .project__img {
+    margin: 0;
+    padding-right: 50px;
+    padding-top: 20px;
+    
   }
+
+}
+
+@media all and (max-width: 480px) {
   
+  /**************  Header Section  **************/
 
-  /* About.html <main> */
-  /* empty */
+  /**************  Presentation Section  **************/
 
-  /* Work.html <main> */
-  .project-list {
-    grid-template-columns: 1fr;
+  .page-profile {
+    display: flex;
+    flex-direction: column;
   }
 
-  /* Contact.html <main> */
-  /* empty */
+  .page-profile__portrait {
+    width: 300px;
+    margin-left: 100px;
+  }
 
-  /* <Footer> */
-  /* empty */
+  .page-profile__text-wrapper {
+    margin-top: -50px;
+  }
+
+  /**************  About Section  **************/
+
+  .skills-images-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      
+  }
+
+  /**************  Work Section  **************/
+
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+  }
+
+  .project-wrapper {
+    height: 200px;
+  }
+
+  .project__img {
+    width: 350px;
+    margin-left: 40px;
+  }
+
+  .project__description-title {
+    font-size: 12px;
+  }
+
+  .project__description-subtitle {
+    font-size: 10px;
+  }
+
+  .project__description-p {
+    width: 220px;
+    font-size: 9px;
+  }
+
+  .button-projects {
+    
+  }
+
+  /**************  Footer Section  **************/
+
+  .footer-text {
+    text-align: center;
+  }
+
+}
+
+@media all and (max-width: 425px) {
+
+  /**************  Presentation Section  **************/
+
+  .page-profile__portrait {
+    margin-left: 70px;
+  }
+
+  .page-profile__from {
+    margin-top: 2px;
+  }
+
+  .page-profile__text-wrapper {
+    margin-right: 30px;
+  }
+
+  /**************  Work Section  **************/
+
+  .project__img {
+    margin: 0;
+  }
+
+  .project__description-p {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 375px) {
+
+  /**************  Presentation Section  **************/
+
+  .page-profile__portrait {
+    margin-left: 40px;
+  }
+
+  .page-profile__from {
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+
+  /**************  Work Section  **************/
+
+  .project__img {
+    margin: 0;
+    padding-right: 80px;
+  }
+
+  .project__description-p {
+    width: 280px;
+  }
+
+}
+
+@media all and (max-width: 320px) {
+
+  /**************  Presentation Section  **************/
+
+  .page-profile__portrait {
+    margin-left: 10px;
+  }
+
+  .page-profile__text-wrapper {
+    margin-left: 0;
+  }
+
+  .page-profile__from {
+    margin-right: 0;
+  }
+
+  /**************  Work Section  **************/
+
+  .project__img {
+    margin: 0;
+    padding-right: 130px;
+  }
+
+  .project__description-p {
+    width: 220px;
+  }
+
 }
