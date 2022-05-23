@@ -493,8 +493,10 @@ header {
 
 
 .contact-text {
+  align-self: center;
   padding-bottom: 70px;
   color: #93896d;
+  width: 600px;
 }
 
 .contact-social-media {
@@ -793,9 +795,6 @@ header {
     font-size: 9px;
   }
 
-  .button-projects {
-    
-  }
 
   /**************  Footer Section  **************/
 
@@ -813,8 +812,13 @@ header {
     margin-left: 70px;
   }
 
+  .page-profile__present {
+    margin-left: 20px;
+  }
+
   .page-profile__from {
     margin-top: 2px;
+    margin-left: 70px;
   }
 
   .page-profile__text-wrapper {
@@ -830,6 +834,14 @@ header {
   .project__description-p {
     width: 300px;
   }
+
+  .contact-text {
+    width: 350px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
 }
 
 @media all and (max-width: 375px) {
@@ -839,6 +851,7 @@ header {
   .page-profile__portrait {
     margin-left: 40px;
   }
+
 
   .page-profile__from {
     margin-right: 10px;
@@ -854,6 +867,10 @@ header {
 
   .project__description-p {
     width: 280px;
+  }
+
+  .contact-text {
+    width: 300px;
   }
 
 }
@@ -883,6 +900,10 @@ header {
 
   .project__description-p {
     width: 220px;
+  }
+
+  .contact-text {
+    width: 250px;
   }
 
 }
