@@ -155,7 +155,7 @@ header {
 #toggle {
   position: absolute;
   top: 14px;
-  right: 0;
+  right: 25px;
   width: 60px;
   height: 60px;
   background: inherit;
@@ -200,7 +200,7 @@ header {
 #navbar {
   position: relative;
   height: 60px;
-  right: 60px;
+  right: 65px;
   background: inherit;
   transition: 0.5s;
   width: 0px;
@@ -208,7 +208,7 @@ header {
 }
 
 #navbar.active {
-  width: 540px;
+  width: 600px;
 }
 
 #navbar ul {
@@ -256,7 +256,7 @@ header {
   display: flex;
   flex-direction: row;
   margin-top: 100px;
-  margin-left: 190px;
+  margin-left: 140px;
 }
 
 .page-profile__present {
@@ -277,10 +277,15 @@ header {
 .page-profile__from {
   color: #ebe8e0;
   margin-top: -20px;
-  margin-left: 190px;
+  margin-left: 140px;
 }
 
 /**************** About section ****************/
+
+#about {
+  margin-top: 500px;
+}
+
 .project-about {
   clear: both;
   display: flex;
